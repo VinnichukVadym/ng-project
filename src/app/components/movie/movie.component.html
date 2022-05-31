@@ -1,0 +1,7 @@
+<div>
+  <a routerLink="/movie-details">
+    <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="movie">
+    <div class="txt">Name: {{movie.title}}</div>
+  </a>
+    <div *ngFor="let genre of genres">Genre: {{genre.name}}</div>
+</div>

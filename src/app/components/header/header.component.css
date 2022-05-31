@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: cornflowerblue;
+  height: 80px;
+  padding: 0 60px;
+  border-radius: 10px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50%;
+}
+.user{
+  display: flex;
+  column-gap: 20px;
+}
+a {
+  text-decoration: none;
+  color: snow;
+  font-size: 28px;
+  padding: 0 30px;
+}
+
+.active {
+  color: crimson;
+}
