@@ -1,0 +1,6 @@
+<form [formGroup]="form">
+  <label>Search Movie: <input type="text" formControlName="search"></label>
+  <button [disabled]="form.invalid" (click)="search()">Search</button>
+  <hr>
+  <div *ngFor="let result of searchValue">{{result.name}}</div>
+</form>

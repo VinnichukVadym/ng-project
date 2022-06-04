@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 import {MovieService} from "../../services";
 import {IGenre, IMovie} from "../../interfaces";
+import {DataService} from "../../services";
 
 @Component({
   selector: 'app-movie',
@@ -12,25 +13,23 @@ export class MovieComponent implements OnInit {
 
   @Input()
   movie: IMovie;
+  genre: IGenre;
   genres: IGenre[];
 
-  constructor(private movieService: MovieService) {
-
+  constructor(private movieService: MovieService,
+              private dataService: DataService) {
   }
 
   ngOnInit(): void {
-    this.movieService.getGenre().subscribe(value => {
-      let arr = [] as IGenre[];
-      for (let id of this.movie.genre_ids) {
-        value.genres.map(genre => {
-          if (id === genre.id) {
-            arr.push(genre)
-          }
-        });
-        this.genres = arr
-      }
-    })
-
+    this.dataService.storage.subscribe(value => this.genres = value)
+    for (let genre of this.genres) {
+      this.movie.genre_ids.map(id => {
+        if (id === genre.id) {
+          this.genre = genre
+        }
+      });
+    }
   }
+
 
 }

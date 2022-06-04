@@ -11,6 +11,13 @@ import {HomeComponent} from './components/home/home.component';
 import {MoviesListComponent} from './components/movies-list/movies-list.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { MoviesPageComponent } from './components/movies-page/movies-page.component';
+import { SearchComponent } from './components/search/search.component';
+import { GenresComponent } from './components/genres/genres.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { PosterPreviewComponent } from './components/poster-preview/poster-preview.component';
+import { SortGenreComponent } from './components/sort-genre/sort-genre.component';
+import { PlagiarismComponent } from './components/plagiarism/plagiarism.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +28,18 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     MoviesListComponent,
     MovieComponent,
     MovieDetailsComponent,
+    MoviesPageComponent,
+    SearchComponent,
+    GenresComponent,
+    PosterPreviewComponent,
+    SortGenreComponent,
+    PlagiarismComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {
