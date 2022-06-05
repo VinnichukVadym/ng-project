@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 import {MovieService} from "../../services";
 import {IMovie} from "../../interfaces";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-search',
@@ -16,7 +17,8 @@ export class SearchComponent implements OnInit {
   result: IMovie[];
 
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService,
+              private activatedRoute: ActivatedRoute) {
     this._createForm();
   }
 
@@ -27,13 +29,14 @@ export class SearchComponent implements OnInit {
     this.form = new FormGroup({
       search: new FormControl(null, [Validators.required])
     })
-
   }
 
-  search() {
-    let rawValue = this.form.getRawValue();
-    this.movieService.search(rawValue.search).subscribe(({results}) => {
-      this.searchValue = results
+  search(): void {
+    this.activatedRoute.queryParams.subscribe(({page}) => {
+      let rawValue = this.form.getRawValue();
+      this.movieService.search(rawValue.search, page || 1).subscribe(({results}) => {
+        this.searchValue = results
+      })
     })
   }
 }
