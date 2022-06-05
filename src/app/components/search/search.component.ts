@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 import {MovieService} from "../../services";
-import {IResults} from "../../interfaces";
+import {IMovie} from "../../interfaces";
 
 @Component({
   selector: 'app-search',
@@ -12,7 +12,9 @@ import {IResults} from "../../interfaces";
 export class SearchComponent implements OnInit {
 
   form: FormGroup;
-  searchValue: IResults[];
+  searchValue: IMovie[];
+  result: IMovie[];
+
 
   constructor(private movieService: MovieService) {
     this._createForm();
@@ -30,7 +32,8 @@ export class SearchComponent implements OnInit {
 
   search() {
     let rawValue = this.form.getRawValue();
-    console.log(rawValue)
-    this.movieService.search(rawValue.search).subscribe(({results}) =>this.searchValue =  results)
+    this.movieService.search(rawValue.search).subscribe(({results}) => {
+      this.searchValue = results
+    })
   }
 }

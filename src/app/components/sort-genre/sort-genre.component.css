@@ -43,3 +43,10 @@ button{
 .plagiarism{
   grid-column: 3;
 }
+.title{
+  text-align: center;
+  margin-top: 20px;
+}
+.title span{
+  opacity: 0.5;
+}

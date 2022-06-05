@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {DataService, MovieService} from "../../services";
 import {IGenre} from "../../interfaces";
 import {Router} from "@angular/router";
@@ -11,6 +11,8 @@ import {Router} from "@angular/router";
 export class GenresComponent implements OnInit {
 
   genres: IGenre[];
+  @Output()
+  genreEmitter= new EventEmitter<IGenre>();
 
   constructor(private movieService: MovieService,
               private dataService: DataService,
@@ -24,7 +26,7 @@ export class GenresComponent implements OnInit {
     })
   }
 
-  sortGenre(genre: IGenre) {
+  sortGenre(genre: IGenre):void {
     this.router.navigate([genre.id])
   }
 }

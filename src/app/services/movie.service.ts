@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
-import {IBuffer, IObjGenres, ISearch} from "../interfaces";
+import {IBuffer, IMovie, IObjGenres, ISearch} from "../interfaces";
 import {urls} from "../constants";
 
 @Injectable({
@@ -17,8 +17,8 @@ export class MovieService {
     return this.httpClient.get<IBuffer>(urls.movies, {params: {page}})
   }
 
-  getById(): Observable<IBuffer> {
-    return this.httpClient.get<IBuffer>(urls.movies)
+  getById(id:number): Observable<IMovie> {
+    return this.httpClient.get<IMovie>(`${urls.movie}/${id}`)
   }
 
   getGenre(): Observable<IObjGenres> {
