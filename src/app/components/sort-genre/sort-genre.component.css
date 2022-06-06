@@ -1,5 +1,6 @@
 .container{
   display: flex;
+  background: var(--color-secondary);
 }
 .cards{
   display: grid;
@@ -27,7 +28,7 @@
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--font-color);
 }
 
 .genre {
@@ -46,6 +47,7 @@ button{
 .title{
   text-align: center;
   margin-top: 20px;
+  color: var(--font-color);
 }
 .title span{
   opacity: 0.5;

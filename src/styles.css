@@ -1,8 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+.theme-dark {
+  --color-primary: black;
+  --color-secondary: #243133;
+  --color-accent: red;
+  --font-color: #ffffff;
+}
+
+.theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #47cde5;
+  --font-color: #fffff;
+}
+
+* {
   margin: 0;
 }
-  body{
-    background: snow;
-    margin-top: 55px;
-  }
+
+body {
+  margin-top: 55px;
+}

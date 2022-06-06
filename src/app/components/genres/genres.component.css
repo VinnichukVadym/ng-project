@@ -1,7 +1,7 @@
 .container{
   padding: 20px 20px 0 20px;
   width: 150px;
-  background: black;
+  background: var(--color-primary);
   color: snow;
   height: 100%;
 }
@@ -9,13 +9,13 @@
   padding: 5px 0;
 }
 .btn{
-  background: black;
-  color: snow;
+  background: var(--color-primary);
+  color: var(--font-color);
   font-size: 18px;
   cursor:pointer;
   border: none;
 }
 .btn:hover{
-  color: red;
+  color: var(--color-accent);
   transition: 0.8s;
 }

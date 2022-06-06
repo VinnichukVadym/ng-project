@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  background: var(--color-secondary);
 }
 
 .movie {
@@ -14,13 +15,14 @@
 
 .movie a {
   text-decoration: none;
-  color: black;
+  color: var(--font-color);
   font-weight: bold;
 }
 
 .poster {
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -28,3 +30,7 @@
   margin-top: 15px;
   opacity: 0.6;
 }
+.txt2{
+  color: grey;
+}
+

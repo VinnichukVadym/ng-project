@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: black;
-  color: snow;
+  background: var(--color-primary);
+  color: var(--font-color);
   height: 55px;
   padding: 0 60px;
 }
@@ -15,8 +15,8 @@
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 0.1px;
-  background: black;
-  color: snow;
+  background: var(--color-primary);
+  color: var(--font-color);
   cursor: pointer;
   border: none;
 }
@@ -30,7 +30,7 @@
 }
 
 a:hover {
-  color: red;
+  color: var(--color-accent);
   transition: 400ms;
 }
 
@@ -45,7 +45,7 @@ img {
   display: flex;
   align-items: center;
   column-gap: 20px;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 a {
@@ -56,5 +56,5 @@ a {
 }
 
 .active {
-  color: red;
+  color: var(--color-accent);
 }

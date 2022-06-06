@@ -1,8 +1,9 @@
 .wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: calc(100vh - 55px);
   align-items: center;
+  background: var(--color-secondary);
 }
 
 .form {
@@ -12,6 +13,7 @@
 label {
   font-weight: bold;
   font-size: 24px;
+  color: var(--font-color);
 }
 
 input {
@@ -25,8 +27,8 @@ input {
 .btn {
   border: none;
   border-radius: 20px;
-  background: black;
-  color: snow;
+  background: var(--color-primary);
+  color: var(--font-color);
   padding: 10px 20px;
   cursor: pointer;
   font-size: 20px;
@@ -34,7 +36,6 @@ input {
 
 .container {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(5, 250px);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
@@ -54,7 +55,7 @@ input {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--font-color);
 }
 
 img{

@@ -5,8 +5,7 @@
       <button class="btn" [disabled]="form.invalid" (click)="search()">Search</button>
     </form>
   </div>
-  <hr>
-  <div class="container">
+  <div *ngIf="searchValue" class="container">
     <div *ngFor="let movie of searchValue">
       <a routerLink="/movie-details" [state]="{data:movie}">
         <div class="card">
@@ -20,5 +19,5 @@
       </a>
     </div>
   </div>
-</div>
 <app-plagiarism *ngIf="searchValue"></app-plagiarism>
+</div>

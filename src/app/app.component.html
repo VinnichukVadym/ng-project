@@ -1,2 +1,7 @@
-<router-outlet></router-outlet>
-
+<div class="{{theme}}">
+  <label id="switch" class="switch">
+    <input type="checkbox" (change)="toggleTheme()" id="slider">
+    <span class="slider round"></span>
+  </label>
+  <router-outlet></router-outlet>
+</div>
