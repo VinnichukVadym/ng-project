@@ -1,6 +1,7 @@
 .container{
   display: flex;
   background: var(--color-secondary);
+  padding-bottom: 20px;
 }
 .cards{
   display: grid;

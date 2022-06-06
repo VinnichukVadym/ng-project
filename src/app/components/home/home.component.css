@@ -1,6 +1,8 @@
 .container {
   display: flex;
   background: var(--color-secondary);
+  min-height: 100vh;
+  padding-bottom: 20px;
 }
 
 .movie {
