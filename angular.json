@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "ad672b9f-a571-4cae-af21-55461733f16d"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -51,6 +54,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "optimization": true,
               "outputHashing": "all"
             },
             "development": {

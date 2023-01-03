@@ -1,6 +1,6 @@
 import {environment} from "../../environments/environment";
 
-const {API} = environment;
+const {API}:any = environment;
 
 const urls = {
   movies: `${API}/discover/movie`,

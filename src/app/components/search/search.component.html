@@ -10,8 +10,8 @@
       <a routerLink="/movie-details" [state]="{data:movie}">
         <div class="card">
           <app-poster-preview *ngIf="movie.poster_path" [poster]="movie.poster_path"></app-poster-preview>
-          <img *ngIf="!movie.poster_path"
-               src="https://www.croaziere.net/uploads/images/2021/8/4/smallv-image-not-available-esp5.png"
+          <img *ngIf="!movie.poster_path "
+               src="assets/img/notFoundFoto.png"
                alt="no photo">
           <div class="txt">Name: {{movie.title}}</div>
           <div class="txt2">Rating: {{movie.vote_average}}</div>
